@@ -1,0 +1,141 @@
+/* Global */
+:root {
+  --color-red: #ea5353;
+  --color-cyan: #45d3d3;
+  --color-orange: #fcaf4a;
+  --color-blue: #549ef2;
+  --color-grey-500: #4c4e61;
+  --color-grey-400: #697077;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: #eeffff;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  align-items: center;
+}
+.light--title,
+.heavy--title {
+  font-size: 3rem;
+}
+.light--title {
+  font-weight: normal;
+  color: var(--color-grey-400);
+}
+.heavy--title {
+  font-weight: 600;
+
+  color: var(--color-grey-500);
+}
+.paragraph {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 45rem;
+  color: var(--color-grey-400);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  align-items: center;
+}
+.card {
+  background-color: #fff;
+  padding: 3rem 3rem 4rem;
+  border-radius: 1rem;
+  max-width: 37.5rem;
+  border-top: 0.6rem solid;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.card__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.card__description {
+  font-size: 1.7rem;
+  color: var(--color-grey-400);
+  line-height: 1.4;
+}
+img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-top: 3rem;
+}
+.left {
+  align-self: center;
+}
+.left .card {
+  border-color: var(--color-cyan);
+}
+.center > .card:first-of-type {
+  border-color: var(--color-red);
+}
+.center > .card:last-child {
+  border-color: var(--color-orange);
+}
+.right {
+  align-self: center;
+}
+.right .card {
+  border-color: var(--color-blue);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 4rem 2rem;
+  }
+  .heading {
+    margin-bottom: 5rem;
+  }
+  .light--title,
+  .heavy--title {
+    font-size: 2.3rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .card {
+    margin: 0 auto;
+  }
+  .card__description {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .right .card {
+    margin-top: -40%;
+  }
+}
