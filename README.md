@@ -15,8 +15,8 @@ This is my solution to the [Four Card Feature Section challenge](https://www.fro
 
 ### Links
 
-- [Live Site](https://mohamed14-7.github.io/Product-preview-card-component/)
-- [Solution](https://github.com/Mohamed14-7/Product-preview-card-component)
+- [Live Site](https://mohamed14-7.github.io/Four-card-feature-section/)
+- [Solution](https://github.com/Mohamed14-7/Four-card-feature-section)
 
 ## Built With
 
